@@ -1,0 +1,12 @@
+module fig_322(F,A,B);
+output F;
+input A,B;
+wire w1,w2,w3,w4;
+not #(4)G1(w1,A);
+not #(4)G2(w2,B);
+and #(8)G3(w3,B,w1);
+and #(8)G4(w4,A,w2);
+or  #(10)G5(F,w3,w4);
+endmodule
+
+
